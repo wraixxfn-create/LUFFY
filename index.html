@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monkey D. Luffy — 3D Character Model</title>
+  <meta name="description" content="A procedurally modelled, fully three-dimensional post-timeskip Monkey D. Luffy character model, viewable in the browser and downloadable as glTF." />
+  <link rel="stylesheet" href="/src/viewer/style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+
+    <div id="loading">
+      <div class="spinner"></div>
+      <div class="label">Assembling Luffy…</div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <div>
+          <h1>Monkey D. Luffy</h1>
+          <p>Post-timeskip · procedural 3D character</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btn-wire" class="chip" title="Toggle wireframe (W)">Wireframe</button>
+        <button id="btn-spin" class="chip is-on" title="Toggle turntable (R)">Turntable</button>
+        <a id="btn-download" class="chip primary" href="/luffy.glb" download="luffy_post_timeskip.glb" title="Download the glTF binary">
+          Download .glb
+        </a>
+      </div>
+    </header>
+
+    <nav class="views" aria-label="Camera views">
+      <button data-view="front" class="pill is-on">Front</button>
+      <button data-view="threeq" class="pill">3/4</button>
+      <button data-view="side" class="pill">Side</button>
+      <button data-view="back" class="pill">Back</button>
+      <button data-view="face" class="pill">Face</button>
+      <button data-view="feet" class="pill">Feet</button>
+    </nav>
+
+    <aside class="stats">
+      <div><span id="stat-tris">—</span> triangles</div>
+      <div><span id="stat-parts">—</span> parts</div>
+      <div><span>1.85 m</span> tall</div>
+    </aside>
+
+    <footer class="hint">
+      Drag to orbit · scroll to zoom · right-drag to pan
+    </footer>
+  </div>
+
+  <script type="module" src="/src/viewer/main.js"></script>
+</body>
+</html>
